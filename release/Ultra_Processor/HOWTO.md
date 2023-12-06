@@ -3,7 +3,13 @@
 2. install kernel overlay & binary
     $ sudo install.sh
     $ reboot
- 
+
+[Used]
+1. Create video node
+    $ sudo ./start.sh
+2. Play stream by GStreamer
+    $ ./pipeline_example.sh
+
 [Need]
 1. install GStreamer 
     $ sudo apt-get install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-tools libgstreamer-plugins-base1.0-dev
