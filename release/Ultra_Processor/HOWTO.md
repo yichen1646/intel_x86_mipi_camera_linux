@@ -1,7 +1,7 @@
 [Install]
 1. install ubuntu 22.04
 2. install kernel overlay & binary
-    $ sudo install.sh
+    $ sudo ./install.sh
     $ reboot
 
 [Used]
