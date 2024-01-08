@@ -1,19 +1,19 @@
-Index: intel_x86_mipi_camera_linux/out/install/etc/camera/ipu_adl/libcamhal_profile.xml
+Index: build_binary/out/install/etc/camera/ipu_adl/libcamhal_profile.xml
 ===================================================================
---- intel_x86_mipi_camera_linux.orig/out/install/etc/camera/ipu_adl/libcamhal_profile.xml
-+++ intel_x86_mipi_camera_linux/out/install/etc/camera/ipu_adl/libcamhal_profile.xml
+--- build_binary.orig/out/install/etc/camera/ipu_adl/libcamhal_profile.xml
++++ build_binary/out/install/etc/camera/ipu_adl/libcamhal_profile.xml
 @@ -21,6 +21,6 @@
          <!-- The value format of availableSensors is "sensor name"-wf/uf-"CSI port ID" -->
          <availableSensors value="ov13b10-wf-2,ov13b10-uf-1,ov8856-wf-2,ov8856-uf-1,ov01a10-uf-1,ov01a10-uf-2,ov02c10-uf-1,ov02c10-uf-2,
                                   ov2740-uf-1,hm2170-uf-1,hm2170-uf-2,hi556-uf-1,ov01a1s-uf-1,ov08a10-uf-1,
 -                                 imx390,ar0234,external_source,ar0234_usb,lt6911uxc,lt6911uxe"/>
-+                                 imx390,ar0234,external_source,ar0234_usb,lt6911uxc,lt6911uxe,ev2m_gom1"/>
++                                 imx390,ar0234,external_source,ar0234_usb,lt6911uxc,lt6911uxe,ev2m_gom1,ev2m_oom1"/>
      </Common>
  </CameraSettings>
-Index: intel_x86_mipi_camera_linux/out/install/etc/camera/ipu_adl/sensors/ev2m_gom1.xml
+Index: build_binary/out/install/etc/camera/ipu_adl/sensors/ev2m_gom1.xml
 ===================================================================
 --- /dev/null
-+++ intel_x86_mipi_camera_linux/out/install/etc/camera/ipu_adl/sensors/ev2m_gom1.xml
++++ build_binary/out/install/etc/camera/ipu_adl/sensors/ev2m_gom1.xml
 @@ -0,0 +1,68 @@
 +<?xml version="1.0" encoding="UTF-8" ?>
 +<!-- Copyright (C) 2019 Intel Corporation.
@@ -83,22 +83,22 @@ Index: intel_x86_mipi_camera_linux/out/install/etc/camera/ipu_adl/sensors/ev2m_g
 +        <enableAIQ value="false"/>
 +    </Sensor>
 +</CameraSettings>
-Index: intel_x86_mipi_camera_linux/out/install/etc/camera/ipu_mtl/libcamhal_profile.xml
+Index: build_binary/out/install/etc/camera/ipu_mtl/libcamhal_profile.xml
 ===================================================================
---- intel_x86_mipi_camera_linux.orig/out/install/etc/camera/ipu_mtl/libcamhal_profile.xml
-+++ intel_x86_mipi_camera_linux/out/install/etc/camera/ipu_mtl/libcamhal_profile.xml
+--- build_binary.orig/out/install/etc/camera/ipu_mtl/libcamhal_profile.xml
++++ build_binary/out/install/etc/camera/ipu_mtl/libcamhal_profile.xml
 @@ -22,6 +22,6 @@
          <availableSensors value="ov13b10-uf-0,ov13b10-wf-4,ov5675-uf-4,ov01a1s-uf-0,ov01a10-uf-0,ov01a10-uf-4,
                                   ov02c10-uf-0,ov02c10-uf-4,ov02e10-uf-1,ov02e10-uf-4,
                                   hm2170-uf-0,hm2170-uf-4,hm2172-uf-1,hm2172-uf-4,hi556-uf-1,
 -                                 imx390,ar0234,external_source,ar0234_usb,lt6911uxc,lt6911uxe"/>
-+                                 imx390,ar0234,external_source,ar0234_usb,lt6911uxc,lt6911uxe,ev2m_gom1"/>
++                                 imx390,ar0234,external_source,ar0234_usb,lt6911uxc,lt6911uxe,ev2m_gom1,ev2m_oom1"/>
      </Common>
  </CameraSettings>
-Index: intel_x86_mipi_camera_linux/out/install/etc/camera/ipu_mtl/sensors/ev2m_gom1.xml
+Index: build_binary/out/install/etc/camera/ipu_mtl/sensors/ev2m_gom1.xml
 ===================================================================
 --- /dev/null
-+++ intel_x86_mipi_camera_linux/out/install/etc/camera/ipu_mtl/sensors/ev2m_gom1.xml
++++ build_binary/out/install/etc/camera/ipu_mtl/sensors/ev2m_gom1.xml
 @@ -0,0 +1,68 @@
 +<?xml version="1.0" encoding="UTF-8" ?>
 +<!-- Copyright (C) 2019 Intel Corporation.
@@ -168,22 +168,22 @@ Index: intel_x86_mipi_camera_linux/out/install/etc/camera/ipu_mtl/sensors/ev2m_g
 +        <enableAIQ value="false"/>
 +    </Sensor>
 +</CameraSettings>
-Index: intel_x86_mipi_camera_linux/out/install/etc/camera/ipu_tgl/libcamhal_profile.xml
+Index: build_binary/out/install/etc/camera/ipu_tgl/libcamhal_profile.xml
 ===================================================================
---- intel_x86_mipi_camera_linux.orig/out/install/etc/camera/ipu_tgl/libcamhal_profile.xml
-+++ intel_x86_mipi_camera_linux/out/install/etc/camera/ipu_tgl/libcamhal_profile.xml
+--- build_binary.orig/out/install/etc/camera/ipu_tgl/libcamhal_profile.xml
++++ build_binary/out/install/etc/camera/ipu_tgl/libcamhal_profile.xml
 @@ -18,6 +18,6 @@
      <Common>
          <version value="1.0"/>
          <platform value="IPU6"/>
 -        <availableSensors value="hm11b1-uf-1,ov01a1s-uf-1,tpg_ipu6,imx390,ar0234,external_source,ar0234_usb,lt6911uxc"/>
-+        <availableSensors value="hm11b1-uf-1,ov01a1s-uf-1,tpg_ipu6,imx390,ar0234,external_source,ar0234_usb,lt6911uxc,ev2m_gom1"/>
++        <availableSensors value="hm11b1-uf-1,ov01a1s-uf-1,tpg_ipu6,imx390,ar0234,external_source,ar0234_usb,lt6911uxc,ev2m_gom1,ev2m_oom1"/>
      </Common>
  </CameraSettings>
-Index: intel_x86_mipi_camera_linux/out/install/etc/camera/ipu_tgl/sensors/ev2m_gom1.xml
+Index: build_binary/out/install/etc/camera/ipu_tgl/sensors/ev2m_gom1.xml
 ===================================================================
 --- /dev/null
-+++ intel_x86_mipi_camera_linux/out/install/etc/camera/ipu_tgl/sensors/ev2m_gom1.xml
++++ build_binary/out/install/etc/camera/ipu_tgl/sensors/ev2m_gom1.xml
 @@ -0,0 +1,68 @@
 +<?xml version="1.0" encoding="UTF-8" ?>
 +<!-- Copyright (C) 2019 Intel Corporation.
@@ -249,6 +249,225 @@ Index: intel_x86_mipi_camera_linux/out/install/etc/camera/ipu_tgl/sensors/ev2m_g
 +        <!-- The lard tags configuration. Every tag should be 4-characters. -->
 +        <!-- <TuningMode, cmc tag, aiq tag, isp tag, others tag>  -->
 +        <supportedISysSizes value="1920x1080"/> <!-- ascending order request -->
++        <supportedISysFormat value="V4L2_PIX_FMT_UYVY"/>
++        <enableAIQ value="false"/>
++    </Sensor>
++</CameraSettings>
+Index: build_binary/out/install/etc/camera/ipu_adl/sensors/ev2m_oom1.xml
+===================================================================
+--- /dev/null
++++ build_binary/out/install/etc/camera/ipu_adl/sensors/ev2m_oom1.xml
+@@ -0,0 +1,68 @@
++<?xml version="1.0" encoding="UTF-8" ?>
++<!-- Copyright (C) 2019 Intel Corporation.
++
++     Licensed under the Apache License, Version 2.0 (the "License");
++     you may not use this file except in compliance with the License.
++     You may obtain a copy of the License at
++
++          http://www.apache.org/licenses/LICENSE-2.0
++
++     Unless required by applicable law or agreed to in writing, software
++     distributed under the License is distributed on an "AS IS" BASIS,
++     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++     See the License for the specific language governing permissions and
++     limitations under the License.
++-->
++
++<CameraSettings>
++    <Sensor name="ev2m_oom1" description="Innodisk EV2M-OOM1 camera module">
++        <MediaCtlConfig id="0">
++            <format name="EV2M-OOM1 a" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <format name="Intel IPU6 CSI-2 0" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <format name="Intel IPU6 CSI2 BE SOC 0" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <link srcName="EV2M-OOM1 a" srcPad="0" sinkName="Intel IPU6 CSI-2 0" sinkPad="0" enable="true"/>
++            <link srcName="Intel IPU6 CSI-2 0" srcPad="1" sinkName="Intel IPU6 CSI2 BE SOC 0" sinkPad="0" enable="true"/>
++            <link srcName="Intel IPU6 CSI2 BE SOC 0" srcPad="1" sinkName="Intel IPU6 BE SOC capture 0" sinkPad="0" enable="true"/>
++            <videonode name="Intel IPU6 BE SOC capture 0" videoNodeType="VIDEO_GENERIC"/>
++            <videonode name="Intel IPU6 CSI-2 0" videoNodeType="VIDEO_ISYS_RECEIVER"/>
++            <videonode name="EV2M-OOM1 a" videoNodeType="VIDEO_PIXEL_ARRAY"/>
++        </MediaCtlConfig>
++
++        <StaticMetadata>
++            <!-- list of stream config info. Meanings of each part is "format,widthxheight,field(0 is none, 7 is alternate),mcId" -->
++            <supportedStreamConfig value="V4L2_PIX_FMT_UYVY,1920x1200,0,0"/>
++            <fpsRange value="60"/>
++        </StaticMetadata>
++
++        <!-- The lard tags configuration. Every tag should be 4-characters. -->
++        <!-- <TuningMode, cmc tag, aiq tag, isp tag, others tag>  -->
++        <supportedISysSizes value="1920x1200"/> <!-- ascending order request -->
++        <supportedISysFormat value="V4L2_PIX_FMT_UYVY"/>
++        <enableAIQ value="false"/>
++    </Sensor>
++    <Sensor name="ev2m_oom1-2" description="Innodisk EV2M-OOM1 camera module">
++        <MediaCtlConfig id="0">
++            <format name="EV2M-OOM1 c" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <format name="Intel IPU6 CSI-2 2" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <format name="Intel IPU6 CSI2 BE SOC 1" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <link srcName="EV2M-OOM1 c" srcPad="0" sinkName="Intel IPU6 CSI-2 2" sinkPad="0" enable="true"/>
++            <link srcName="Intel IPU6 CSI-2 2" srcPad="1" sinkName="Intel IPU6 CSI2 BE SOC 1" sinkPad="0" enable="true"/>
++            <link srcName="Intel IPU6 CSI2 BE SOC 1" srcPad="1" sinkName="Intel IPU6 BE SOC 1 capture 0" sinkPad="0" enable="true"/>
++            <videonode name="Intel IPU6 BE SOC 1 capture 0" videoNodeType="VIDEO_GENERIC"/>
++            <videonode name="Intel IPU6 CSI-2 2" videoNodeType="VIDEO_ISYS_RECEIVER"/>
++            <videonode name="EV2M-OOM1 c" videoNodeType="VIDEO_PIXEL_ARRAY"/>
++        </MediaCtlConfig>
++
++        <StaticMetadata>
++            <!-- list of stream config info. Meanings of each part is "format,widthxheight,field(0 is none, 7 is alternate),mcId" -->
++            <supportedStreamConfig value="V4L2_PIX_FMT_UYVY,1920x1200,0,0"/>
++            <fpsRange value="60"/>
++        </StaticMetadata>
++
++        <!-- The lard tags configuration. Every tag should be 4-characters. -->
++        <!-- <TuningMode, cmc tag, aiq tag, isp tag, others tag>  -->
++        <supportedISysSizes value="1920x1200"/> <!-- ascending order request -->
++        <supportedISysFormat value="V4L2_PIX_FMT_UYVY"/>
++        <enableAIQ value="false"/>
++    </Sensor>
++</CameraSettings>
+Index: build_binary/out/install/etc/camera/ipu_mtl/sensors/ev2m_oom1.xml
+===================================================================
+--- /dev/null
++++ build_binary/out/install/etc/camera/ipu_mtl/sensors/ev2m_oom1.xml
+@@ -0,0 +1,68 @@
++<?xml version="1.0" encoding="UTF-8" ?>
++<!-- Copyright (C) 2019 Intel Corporation.
++
++     Licensed under the Apache License, Version 2.0 (the "License");
++     you may not use this file except in compliance with the License.
++     You may obtain a copy of the License at
++
++          http://www.apache.org/licenses/LICENSE-2.0
++
++     Unless required by applicable law or agreed to in writing, software
++     distributed under the License is distributed on an "AS IS" BASIS,
++     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++     See the License for the specific language governing permissions and
++     limitations under the License.
++-->
++
++<CameraSettings>
++    <Sensor name="ev2m_oom1" description="Innodisk EV2M-OOM1 camera module">
++        <MediaCtlConfig id="0">
++            <format name="EV2M-OOM1 a" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <format name="Intel IPU6 CSI-2 0" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <format name="Intel IPU6 CSI2 BE SOC 0" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <link srcName="EV2M-OOM1 a" srcPad="0" sinkName="Intel IPU6 CSI-2 0" sinkPad="0" enable="true"/>
++            <link srcName="Intel IPU6 CSI-2 0" srcPad="1" sinkName="Intel IPU6 CSI2 BE SOC 0" sinkPad="0" enable="true"/>
++            <link srcName="Intel IPU6 CSI2 BE SOC 0" srcPad="1" sinkName="Intel IPU6 BE SOC capture 0" sinkPad="0" enable="true"/>
++            <videonode name="Intel IPU6 BE SOC capture 0" videoNodeType="VIDEO_GENERIC"/>
++            <videonode name="Intel IPU6 CSI-2 0" videoNodeType="VIDEO_ISYS_RECEIVER"/>
++            <videonode name="EV2M-OOM1 a" videoNodeType="VIDEO_PIXEL_ARRAY"/>
++        </MediaCtlConfig>
++
++        <StaticMetadata>
++            <!-- list of stream config info. Meanings of each part is "format,widthxheight,field(0 is none, 7 is alternate),mcId" -->
++            <supportedStreamConfig value="V4L2_PIX_FMT_UYVY,1920x1200,0,0"/>
++            <fpsRange value="60"/>
++        </StaticMetadata>
++
++        <!-- The lard tags configuration. Every tag should be 4-characters. -->
++        <!-- <TuningMode, cmc tag, aiq tag, isp tag, others tag>  -->
++        <supportedISysSizes value="1920x1200"/> <!-- ascending order request -->
++        <supportedISysFormat value="V4L2_PIX_FMT_UYVY"/>
++        <enableAIQ value="false"/>
++    </Sensor>
++    <Sensor name="ev2m_oom1-2" description="Innodisk EV2M-OOM1 camera module">
++        <MediaCtlConfig id="0">
++            <format name="EV2M-OOM1 e" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <format name="Intel IPU6 CSI-2 4" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <format name="Intel IPU6 CSI2 BE SOC 1" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <link srcName="EV2M-OOM1 e" srcPad="0" sinkName="Intel IPU6 CSI-2 4" sinkPad="0" enable="true"/>
++            <link srcName="Intel IPU6 CSI-2 4" srcPad="1" sinkName="Intel IPU6 CSI2 BE SOC 1" sinkPad="0" enable="true"/>
++            <link srcName="Intel IPU6 CSI2 BE SOC 1" srcPad="1" sinkName="Intel IPU6 BE SOC 1 capture 0" sinkPad="0" enable="true"/>
++            <videonode name="Intel IPU6 BE SOC 1 capture 0" videoNodeType="VIDEO_GENERIC"/>
++            <videonode name="Intel IPU6 CSI-2 4" videoNodeType="VIDEO_ISYS_RECEIVER"/>
++            <videonode name="EV2M-OOM1 e" videoNodeType="VIDEO_PIXEL_ARRAY"/>
++        </MediaCtlConfig>
++
++        <StaticMetadata>
++            <!-- list of stream config info. Meanings of each part is "format,widthxheight,field(0 is none, 7 is alternate),mcId" -->
++            <supportedStreamConfig value="V4L2_PIX_FMT_UYVY,1920x1200,0,0"/>
++            <fpsRange value="60"/>
++        </StaticMetadata>
++
++        <!-- The lard tags configuration. Every tag should be 4-characters. -->
++        <!-- <TuningMode, cmc tag, aiq tag, isp tag, others tag>  -->
++        <supportedISysSizes value="1920x1200"/> <!-- ascending order request -->
++        <supportedISysFormat value="V4L2_PIX_FMT_UYVY"/>
++        <enableAIQ value="false"/>
++    </Sensor>
++</CameraSettings>
+Index: build_binary/out/install/etc/camera/ipu_tgl/sensors/ev2m_oom1.xml
+===================================================================
+--- /dev/null
++++ build_binary/out/install/etc/camera/ipu_tgl/sensors/ev2m_oom1.xml
+@@ -0,0 +1,68 @@
++<?xml version="1.0" encoding="UTF-8" ?>
++<!-- Copyright (C) 2019 Intel Corporation.
++
++     Licensed under the Apache License, Version 2.0 (the "License");
++     you may not use this file except in compliance with the License.
++     You may obtain a copy of the License at
++
++          http://www.apache.org/licenses/LICENSE-2.0
++
++     Unless required by applicable law or agreed to in writing, software
++     distributed under the License is distributed on an "AS IS" BASIS,
++     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++     See the License for the specific language governing permissions and
++     limitations under the License.
++-->
++
++<CameraSettings>
++    <Sensor name="ev2m_oom1" description="Innodisk EV2M-OOM1 camera module">
++        <MediaCtlConfig id="0">
++            <format name="EV2M-OOM1 a" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <format name="Intel IPU6 CSI-2 0" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <format name="Intel IPU6 CSI2 BE SOC 0" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <link srcName="EV2M-OOM1 a" srcPad="0" sinkName="Intel IPU6 CSI-2 0" sinkPad="0" enable="true"/>
++            <link srcName="Intel IPU6 CSI-2 0" srcPad="1" sinkName="Intel IPU6 CSI2 BE SOC 0" sinkPad="0" enable="true"/>
++            <link srcName="Intel IPU6 CSI2 BE SOC 0" srcPad="1" sinkName="Intel IPU6 BE SOC capture 0" sinkPad="0" enable="true"/>
++            <videonode name="Intel IPU6 BE SOC capture 0" videoNodeType="VIDEO_GENERIC"/>
++            <videonode name="Intel IPU6 CSI-2 0" videoNodeType="VIDEO_ISYS_RECEIVER"/>
++            <videonode name="EV2M-OOM1 a" videoNodeType="VIDEO_PIXEL_ARRAY"/>
++        </MediaCtlConfig>
++
++        <StaticMetadata>
++            <!-- list of stream config info. Meanings of each part is "format,widthxheight,field(0 is none, 7 is alternate),mcId" -->
++            <supportedStreamConfig value="V4L2_PIX_FMT_UYVY,1920x1200,0,0"/>
++            <fpsRange value="60"/>
++        </StaticMetadata>
++
++        <!-- The lard tags configuration. Every tag should be 4-characters. -->
++        <!-- <TuningMode, cmc tag, aiq tag, isp tag, others tag>  -->
++        <supportedISysSizes value="1920x1200"/> <!-- ascending order request -->
++        <supportedISysFormat value="V4L2_PIX_FMT_UYVY"/>
++        <enableAIQ value="false"/>
++    </Sensor>
++    <Sensor name="ev2m_oom1-2" description="Innodisk EV2M-OOM1 camera module">
++        <MediaCtlConfig id="0">
++            <format name="EV2M-OOM1 e" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <format name="Intel IPU6 CSI-2 4" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <format name="Intel IPU6 CSI2 BE SOC 1" pad="0" width="1920" height="1200" format="V4L2_MBUS_FMT_UYVY8_1X16"/>
++            <link srcName="EV2M-OOM1 e" srcPad="0" sinkName="Intel IPU6 CSI-2 4" sinkPad="0" enable="true"/>
++            <link srcName="Intel IPU6 CSI-2 4" srcPad="1" sinkName="Intel IPU6 CSI2 BE SOC 1" sinkPad="0" enable="true"/>
++            <link srcName="Intel IPU6 CSI2 BE SOC 1" srcPad="1" sinkName="Intel IPU6 BE SOC 1 capture 0" sinkPad="0" enable="true"/>
++            <videonode name="Intel IPU6 BE SOC 1 capture 0" videoNodeType="VIDEO_GENERIC"/>
++            <videonode name="Intel IPU6 CSI-2 4" videoNodeType="VIDEO_ISYS_RECEIVER"/>
++            <videonode name="EV2M-OOM1 e" videoNodeType="VIDEO_PIXEL_ARRAY"/>
++        </MediaCtlConfig>
++
++        <StaticMetadata>
++            <!-- list of stream config info. Meanings of each part is "format,widthxheight,field(0 is none, 7 is alternate),mcId" -->
++            <supportedStreamConfig value="V4L2_PIX_FMT_UYVY,1920x1200,0,0"/>
++            <fpsRange value="60"/>
++        </StaticMetadata>
++
++        <!-- The lard tags configuration. Every tag should be 4-characters. -->
++        <!-- <TuningMode, cmc tag, aiq tag, isp tag, others tag>  -->
++        <supportedISysSizes value="1920x1200"/> <!-- ascending order request -->
 +        <supportedISysFormat value="V4L2_PIX_FMT_UYVY"/>
 +        <enableAIQ value="false"/>
 +    </Sensor>
