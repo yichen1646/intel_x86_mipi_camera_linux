@@ -6,10 +6,10 @@ export LIBVA_DRIVER_NAME=iHD
 export GST_GL_PLATFORM=egl
 
 # video_nr -- assign camera device id
-sudo modprobe v4l2loopback video_nr=130,131
+sudo modprobe v4l2loopback video_nr=201,202
 
-gst-launch-1.0 icamerasrc device-name=ev2m_oom1 ! video/x-raw,format=UYVY,width=1920,height=1200 ! v4l2sink device=/dev/video131 &
-gst-launch-1.0 icamerasrc device-name=ev2m_oom1-2 ! video/x-raw,format=UYVY,width=1920,height=1200 ! v4l2sink device=/dev/video132
+gst-launch-1.0 icamerasrc device-name=ev2m_oom1 ! video/x-raw,format=UYVY,width=1920,height=1200 ! v4l2sink device=/dev/video201 &
+gst-launch-1.0 icamerasrc device-name=ev2m_oom1-2 ! video/x-raw,format=UYVY,width=1920,height=1200 ! v4l2sink device=/dev/video202
 
 sudo pkill -2 gst-launch-1.0
 

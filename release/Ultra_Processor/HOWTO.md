@@ -5,9 +5,10 @@
     $ reboot
 
 [Used]
-1. Create video node
+1. Get into sample folder and choose which camera you're using
+2. Create video node
     $ sudo ./start.sh
-2. Play stream by GStreamer
+3. Play stream by GStreamer
     $ ./pipeline_example.sh
 
 [Need]

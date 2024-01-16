@@ -11,3 +11,5 @@ sudo update-grub
 
 sudo cp -r $BINARY_DIR/usr /
 sudo cp -r $BINARY_DIR/etc /
+
+sudo cp firmware/*.bin /lib/firmware/
