@@ -9,6 +9,13 @@ ICAMERASRC_DIR=$BUILD_DIR/icamerasrc
 PATCHES_DIR=$CUR_DIR/patches_binary
 RELEASE_BINARY_DIR=$CUR_DIR/release/Ultra_Processor/binary
 
+# Git Config
+git config --global http.sslVerify false
+git config --global http.postBuffer 1048576000
+git config --global core.compression -1
+git config --global http.lowSpeedLimit 0
+git config --global http.lowSpeedTime 999999
+
 if [ ! -d $BUILD_DIR ]
 then
     mkdir -p $BUILD_DIR
@@ -19,27 +26,24 @@ cd $BUILD_DIR
 if [ ! -d "./ipu6-camera-bins" ]
 then
     echo "##### ipu6-camera-bins doesn't exists. Download will start soon ..."
-    git clone https://github.com/intel/ipu6-camera-bins.git
+    git clone https://github.com/intel/ipu6-camera-bins.git --depth 1 -b iotg_ipu6
     cd ipu6-camera-bins
-    git checkout iotg_ipu6
 fi
 
 cd $BUILD_DIR
 if [ ! -d "./ipu6-camera-hal" ]
 then
     echo "##### ipu6-camera-hal doesn't exists. Download will start soon ..."
-    git clone https://github.com/intel/ipu6-camera-hal.git
+    git clone https://github.com/intel/ipu6-camera-hal.git --depth 1 -b iotg_ipu6
     cd ipu6-camera-hal
-    git checkout iotg_ipu6
 fi
 
 cd $BUILD_DIR
 if [ ! -d "./icamerasrc" ]
 then
     echo "##### icamerasrc doesn't exists. Download will start soon ..."
-    git clone https://github.com/intel/icamerasrc.git
+    git clone https://github.com/intel/icamerasrc.git --depth 1 -b icamerasrc_slim_api
     cd icamerasrc
-    git checkout icamerasrc_slim_api
 fi
 
 cd $BUILD_DIR
