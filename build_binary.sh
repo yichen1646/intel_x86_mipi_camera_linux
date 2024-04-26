@@ -10,11 +10,11 @@ PATCHES_DIR=$CUR_DIR/patches_binary
 RELEASE_BINARY_DIR=$CUR_DIR/release/Ultra_Processor/binary
 
 # Git Config
-git config --global http.sslVerify false
-git config --global http.postBuffer 1048576000
-git config --global core.compression -1
-git config --global http.lowSpeedLimit 0
-git config --global http.lowSpeedTime 999999
+git config --global --replace-all http.sslVerify false
+git config --global --replace-all http.postBuffer 1048576000
+git config --global --replace-all core.compression -1
+git config --global --replace-all http.lowSpeedLimit 0
+git config --global --replace-all http.lowSpeedTime 999999
 
 if [ ! -d $BUILD_DIR ]
 then
